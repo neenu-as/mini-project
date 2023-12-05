@@ -1,0 +1,75 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends 'farmer/farmerindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/ordrsprdctcode#main">
+
+<table width="293" border="1" class="table table-striped table-dark">
+    <tr align="center"><td colspan="9"><h3 ALIGN="center"> <font color="white">ORDER PRODUCT</font></h3></td></tr>
+  <tr>
+    <td colspan="2"><label>
+       <img src="{{ val.image.url }}" width="200" height="200">
+      </label>
+  </tr>
+  <tr>
+    <td width="133">Product</td>
+    <td width="144">
+      <label>
+        <input type="text" name="textfield" value="{{ val.sproduct }}" readonly/>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <td>Details</td>
+    <td>
+      <label>
+        <input type="text" name="textfield2" value="{{ val.details }}" readonly/>
+        </label>
+       </td>
+  </tr>
+      <tr>
+    <td>price</td>
+    <td>
+      <label>
+        <input type="text" name="textfield2" value="{{ val.price }}" readonly/>
+        </label>
+       </td>
+  </tr>
+  <tr>
+    <td>Stock</td>
+    <td>
+      <label>
+        <input type="text" name="textfield3" value="{{ val.quantity }}" readonly/>
+        </label>
+       </td>
+  </tr>
+  <tr>
+    <td>Quantity</td>
+    <td>
+      <label>
+        <input type="text" name="textfield4" required pattern="[0-9]{1,3}"  title="fill the quantity" />
+        </label>
+        </td>
+  </tr>
+  <tr>
+      <td colspan="2">
+          <a href="/view_s_product#about" class="btn btn-outline-info">BACK</a>
+        <label>
+        <input type="submit" align="right" name="Submit" value="ORDER NOW" class="btn btn-outline-success"/>
+        </label>
+                <input type="submit" align="right" name="Submit" value="ADD TO CART" class="btn btn-outline-primary"/>
+
+      </td>
+    </tr>
+</table>
+</form>
+{% endblock %}
+{#<a href="#"></a>#}
+{#</body>#}
+{#</html>#}

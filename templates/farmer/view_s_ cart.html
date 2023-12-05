@@ -1,0 +1,43 @@
+
+{% extends 'farmer/farmerindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1"  class="table table-striped table-dark">
+  <tr align="center"><td colspan="9"><h3 ALIGN="center"> <font color="white">VIEW CART</font></h3></td></tr>
+    <tr>
+      <td>product</td>
+      <td>image</td>
+      <td>quantity</td>
+        <td></td>
+
+    </tr>
+       {% for i in val %}
+    <tr>
+       <td>{{ i.PRODUCT.sproduct}}</td>
+                <td><img src="{{ i.PRODUCT.image.url }}" width="100" height="100"></td>
+
+       <td>{{ i.quantity }}</td>
+     <td></td>
+
+    </tr>
+       {% endfor %}
+  <tr>
+       <td colspan="2">TOTAL</td>
+      <td colspan="2">
+      <input type="text" name="name" value="{{total.price}}" readonly/>
+      </td>
+    </tr>
+  <tr>
+      <td colspan="4" align="center"><label>
+          <a href="sorderfromcart/{{total.id}}"  class="btn btn-primary">ORDER</a>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+
+
+
+

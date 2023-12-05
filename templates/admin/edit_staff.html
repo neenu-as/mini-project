@@ -1,0 +1,78 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends 'admin/admi_2_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post"  enctype="multipart/form-data" action="/edit_stf">
+<table width="200" border="1" class="table table-striped table-dark">
+  <tr>
+    <td>NAME</td><td>
+        <input type="text" name="textfield" value="{{ val.name }}"/>
+    </td>
+  </tr>
+  <tr>
+    <td> GENDER </td><td>
+
+        <label>
+          <input name="radiobutton" type="radio" value="male" checked/>
+          M</label>
+        <label>
+        <input name="radiobutton" type="radio" value="female" checked />
+        F</label>
+
+    </td>
+  </tr>
+  <tr>
+      <td>PLACE</td><td>
+        <input type="text" name="textfield2" value="{{ val.place }}" required pattern="[A-Z a-z.]{3,25}"/>
+
+    </td>
+  </tr>
+  <tr>
+      <td>POST</td><td>
+        <input type="text" name="textfield3" value="{{ val.post }}" required pattern="[A-Z a-z.]{3,25}"/>
+
+    </td>
+  </tr>
+  <tr>
+      <td>PIN</td><td>
+        <input type="text" name="textfield4" value="{{ val.pin }}" required pattern="[0-9]{6}"/>
+
+    </td>
+  </tr>
+  <tr>
+      <td>PHOTO</td><td>
+        <input type="file" name="file"  accept="image/png,image/jpg" />
+
+    </td>
+  </tr>
+  <tr>
+      <td>PHONE NO</td><td>
+        <input type="text" name="textfield5" value="{{ val.phon }}" required pattern="[6789][0-9]{9}"/>
+
+    </td>
+  </tr>
+  <tr>
+      <td>EMAIL</td><td>
+        <input type="email" name="textfield6" value="{{ val.email }}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"/>
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <label>
+        <input type="submit" name="Submit" value="Submit" />
+        </label>
+      <div align="center"></div>
+
+    </td>
+  </tr>
+</table></form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

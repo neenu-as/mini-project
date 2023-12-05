@@ -1,0 +1,58 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+
+{% extends 'officer/officer_2_index.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table width="384"  height="122" border="1" class="table table-striped table-dark" >
+    <tr align="center"><td colspan="9"><h3 ALIGN="center"> <font color="white">VIEW ORDER REQUEST</font></h3></td></tr>
+    <tr>
+      <td >product</td>
+              <td >Image</td>
+
+      <td >quantity</td>
+      <td >price(/kg)</td>
+      <td >date</td>
+        <td >user</td>
+        <td >Total</td>
+                <td width="58" colspan="4"></td>
+
+    </tr>
+
+      {% for i in val %}
+    <tr>
+      <td>&nbsp;{{ i.PRODUCT.name }}</td>
+            <td><img src="{{ i.PRODUCT.image.url }}" width="100" height="100"></td>
+
+          <td>&nbsp;{{ i.quantity }}</td>
+
+      <td>{{ i.PRODUCT.price  }}/-</td>
+      <td>&nbsp;{{ i.ORDER.date }}</td>
+
+      <td>{{ i.ORDER.USER.name }}</td>
+      <td>&nbsp;{{ i.tp }}</td>
+
+          <td  >        {% if i.ORDER.status == 'ORDER' %}
+<p><a href="/acceptorder/{{ i.ORDER.id }}" class="btn btn-success">Accept</a>
+              <a href="/rejectorder/{{ i.ORDER.id }}" class="btn btn-danger">Reject</a>
+
+
+          {% elif i.ORDER.status == 'Accepted' %}
+            Accepted
+          {% endif %}</p></td>
+
+    </tr>
+      {%  endfor %}
+  </table>
+  <a href="#"></a>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

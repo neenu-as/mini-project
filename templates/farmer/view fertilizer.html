@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="search_viewfertilizer">
+  <table width="452" border="1">
+    <tr>
+      <td colspan="6">Name 
+        <label>
+        <input type="text" name="textfield" />
+        <input type="submit" name="Submit" value="search" />
+      </label></td>
+    </tr>
+    <tr>
+      <td width="33">S/no</td>
+      <td width="33">Name</td>
+      <td width="33">Price</td>
+      <td width="33">Quantity</td>
+      <td width="140">Details</td>
+      <td width="140">Shop</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+          <td>{{forloop.counter }}</td>
+        <td>{{ i.name }}</td>
+      <td>&nbsp;{{ i.price }}</td>
+      <td>{{ i.quantity }}</td>
+      <td>{{i.details}}</td>
+    <td>{{ i.SHOPS.name }}</td>
+    </tr>
+      {% endfor %}
+    </tr>
+  </table>
+</form>
+</body>
+</html>

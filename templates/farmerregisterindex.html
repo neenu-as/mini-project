@@ -1,0 +1,196 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+{#<!DOCTYPE html>#}
+{#<html>#}
+<head>
+<title>Dragging register form a Flat Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Dragging register form Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!-- custom css file -->
+<link rel="stylesheet" href="/static/register/web/css/style.css">
+<!-- //custom css file -->
+
+<!-- google fonts -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<!-- //google fonts -->
+
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ <script type="text/javascript">
+$( document ).ready(function() {
+
+    $("#un").keyup(function(){
+
+    var catid;
+    catid = $(this).val();
+
+$.ajax(
+    {
+        type:"GET",
+        url: "/uncheck",
+        data:{
+                 un: catid
+        },
+        success: function( data )
+        {
+        if (data.is_taken) {
+
+                    $( '#message' ).text(data.error_message);
+                    $("#s").attr('disabled',true);
+                  }
+                  else
+                  {
+                  $( '#message' ).text("");
+                  $("#s").removeAttr('disabled');
+                  }
+
+        }
+     })
+});
+
+});
+
+
+
+</script>
+<h1><I>CREATE FARMER ACCOUNT</I></h1>
+<div class="agile-its">
+{#	<h2>Register Here</h2>#}
+	<div class="w3layouts">
+		<div class="photos-upload-view">
+			<form id="upload" action="farmer_reg" method="POST" enctype="multipart/form-data">
+				<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+{#					#}
+						<div class="agileinfo-row">
+							<div class="ferry ferry-from">
+								<label> Name</label>
+								<input type="text" name="textfield" placeholder="Name" required pattern="[A-Z a-z .]{3,25}"/>
+							</div>
+
+{#							<div class="ferry ferry-from">#}
+{#								<label>Confirm Password</label>#}
+{#								<input type="password" name="password" placeholder="Password" required="">#}
+{#							</div>#}
+							<div class="w3_agileits_main_grid_left_l">
+								<h3>Gender</h3>
+							</div>
+							<div class="w3_agileits_main_grid_left_r">
+								<div class="agileinfo_radio_button">
+									<label class="radio"><input type="radio" name="radiobutton" value="male" checked><i></i>Male</label>
+								</div>
+								<div class="agileinfo_radio_button">
+									<label class="radio"><input type="radio" name="radiobutton" value="female" checked><i></i>feMale</label>
+								</div>
+								<div class="clear"> </div>
+							</div>
+								<label>Date Of Birth</label>
+
+							   <div class="ferry ferry-from">
+
+								<input type="date" name="date" placeholder="DOB" required pattern="[A-Z a-z .]{3,25}"/>
+							</div>
+							<div class="clear"></div>
+						</div>
+                           <label>Ward</label>
+							<div class="form_box">
+							   <div class="select-block1">
+								<select name="select2" required="">
+									<option value="">2</option>
+									<option value="">3</option>
+									<option value="">4</option>
+									<option value="">5</option>
+									<option value="">6</option>
+									<option value="">7</option>
+									<option value="">8</option>
+									<option value="">9</option>
+									<option value="">10</option>
+
+								</select>
+							  </div>
+							 </div><br><br>
+
+					<div class="wthree-text">
+{#						<label class="anim">#}
+{#							<input type="checkbox" class="checkbox" required="">#}
+{#							<span>Send me latest updates</span>#}
+{#						</label>#}
+                         <div class="ferry ferry-from">
+								<label>place</label>
+								<input type="text" name="textfield4" placeholder="place" required pattern="[A-Z a-z .]{5,25}"/>
+							</div>
+                        <div class="ferry ferry-from">
+								<label>post</label>
+								<input type="text" name="textfield5" placeholder="post" required pattern="[A-Z a-z .]{4,25}"/>
+							</div>
+                        <div class="ferry ferry-from">
+								<label>pin</label>
+								<input type="text" name="textfield6" placeholder="pin" required pattern="[0-9]{6}"/>
+							</div>
+
+                        <div class="ferry ferry-from">
+								<label>ph no</label>
+								<input type="text" name="textfield7" placeholder="phone number" required pattern="[6789][0-9]{9}" />
+							</div>
+
+                        <div class="ferry ferry-from">
+								<label>Your Email</label>
+								<input type="email" name="textfield8" placeholder="Email"  required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"/>
+							</div>
+
+                        <div>
+								<label>PHOTO</label>
+								 <input type="file"  name="file" placeholder="photo" required accept="image/*"/>
+							</div><br><br>
+                         <div class="ferry ferry-from">
+								<label>Adhaar no</label>
+								<input type="text" name="textfield9" placeholder="Adhaar no"   required pattern="[0-9]{12}"/>
+							</div>
+
+                        <div class="ferry ferry-from">
+								<label> User Name</label>
+								<input type="text" name="textfield10" placeholder="user name" id="un" required/>
+                                                        <p id="message" style="color:red;"></p>
+
+							</div>
+							<div class="ferry ferry-from">
+								<label>Password</label>
+								<input type="password" name="textfield11" placeholder="Password" required/>
+							</div>
+						<div class="wthreesubmitaits">
+							<input type="submit" name="Submit" value="Register">
+						</div>
+						<div class="clear"> </div>
+					</div>
+			</form>
+
+{#		</div>#}
+{#		<div class="clear"></div>#}
+{#		<div class="social">#}
+{#			<a href="#" class="f">F <span> : <span> Login With Facebook </a>#}
+{#			<a href="#" class="t">T <span> : <span> Login With Twitter </a>#}
+{#			<div class="clear"> </div>#}
+{#		</div>#}
+{#	</div>#}
+{#</div>#}
+{#<div class="footer">#}
+{#	<p> © 2017 Dragging Register Form. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>#}
+{#</div>#}
+
+<!-- js files -->
+<script src="/static/register/web/js/filedrag.js"></script>
+<script type="text/javascript" src="/static/register/web/js/jquery.min.js"></script>
+<!-- //js files -->
+
+</body>
+{#</html>#}

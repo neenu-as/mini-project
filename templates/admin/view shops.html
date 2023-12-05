@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="search_shp">
+  <table width="326" border="1">
+    <tr>
+      <td colspan="6">Name 
+        <label>
+        <input type="text" name="textfield" />
+        <input type="submit" name="Submit" value="search" />
+      </label></td>
+    </tr>
+    <tr>
+      <td width="25">s/no</td>
+      <td width="37">Name</td>
+      <td width="51">Address</td>
+      <td width="49">ph no </td>
+      <td width="28">Email</td>
+      <td width="96">&nbsp;</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.name }}</td>
+      <td>{{ i.place}}<br>{{i.post}}<br>{{i.pin}}</td>
+      <td>{{ i.phon }}</td>
+      <td>{{ i.email}}</td>
+        <td><img src="{{ i.photo.url }}" width="100" height= "100" ></td>
+      <td><p><a href="edit_shop/{{ i.id }}#about">edit</a></p>
+      <p><a href="dltshp/{{ i.LOGINID.id }}#about">delete</a></p></td>
+    </tr>
+      {% endfor %}
+    <tr>
+      <td colspan="6"><div align="center"><a href="addshp#about">Add new</a></div></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

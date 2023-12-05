@@ -1,0 +1,46 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends 'farmer/farmerindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="287" border="1" class="table table-striped table-dark">
+  <tr align="center"><td colspan="9"><h3 ALIGN="center"> <font color="white">AZHCHA CHANDHA</font></h3></td></tr>
+    <tr>
+      <td >S/no</td>
+      <td >Images</td>
+      <td >Name</td>
+      <td>Quantity(in kg)</td>
+      <td >Price(/kg)</td>
+      <td >due date</td>
+        <td></td>
+    </tr>
+
+    {% for i in val %}
+    <tr>
+      <td>{{forloop.counter }}&nbsp;</td>
+      <td>&nbsp;<img src="{{ i.image.url }}" width="100dp" height="100dp"/></td>
+      <td>{{ i.name }}&nbsp;</td>
+      <td>{{ i.quantity}}&nbsp;</td>
+      <td>&nbsp;{{ i.price }}</td>
+        <td>{{ i.date }}</td>
+      <td><p><a href="edit_prdct/{{ i.id }}#main" class="btn btn-outline-success">EDIT  </a></p>
+      <p><a href="dltprdct/{{ i.id }}#main" class="btn btn-outline-danger" onclick="return confirm('Do you want to delete')">DELETE</a></p></td>
+    </tr>
+
+      {% endfor %}
+
+
+    <tr>
+      <td colspan="7"><div align="center"><a href="addnewproduct#main" class="btn btn-outline-primary">Add new</a></div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

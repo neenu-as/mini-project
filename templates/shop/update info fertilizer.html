@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="search_ftlzr">
+  <table width="266" border="1">
+    <tr>
+      <td colspan="6">Name 
+        <label>
+        <input type="text" name="textfield" />
+        <input type="submit" name="Submit" value="search" />
+      </label></td>
+    </tr>
+    <tr>
+        <td width="26">s/no</td>
+      <td width="26">Name</td>
+      <td width="26">Price</td>
+      <td width="26">Quantity</td>
+      <td width="26">Details</td>
+      <td width="96">&nbsp;</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+          <td>{{forloop.counter }}</td>
+        <td>{{ i.name }}</td>
+      <td>&nbsp;{{ i.price }}</td>
+      <td>{{ i.quantity }}</td>
+      <td>{{i.details}}</td>
+        <td><p><a href="edit_fertlzr/{{ i.id }}">edit</a></p>
+      <p><a href="dlt_frtzr/{{ i.id }}">delete</a></p></td>
+    </tr>
+      {% endfor %}
+    <tr>
+      <td colspan="6"><div align="center"><a href="addferlzr">Add</a></div></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

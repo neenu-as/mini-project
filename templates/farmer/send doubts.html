@@ -1,0 +1,41 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends 'farmer/farmerindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="snd_dobt">
+  <table width="279" border="1" class="table table-striped table-dark">
+  <tr align="center"><td colspan="9"><h3 ALIGN="center"> <font color="white">SEND DOUBT</font></h3></td></tr>
+    <tr>
+      <td width="89">Officer</td>
+      <td width="174"><label>
+        <select name="select">
+            {% for i in v %}
+            <option value="{{ i.id }}">{{ i.name }}</option>
+            {% endfor %}
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Doubt</td>
+      <td><label>
+          <textarea name="textfield2" ></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="send"  class="btn btn-outline-success"/>
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

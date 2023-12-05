@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="user_reg" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="304" border="1">
+    <tr>
+        <td width="294">NAME </td><td>
+        <input type="text" name="textfield"  class="form-control" required pattern="[A-Z a-z .]{3,25}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>GENDER
+      </td><td>
+        <input name="radiobutton" type="radio" value="male"  checked />
+      M 
+      <input name="radiobutton" type="radio" value="female"  checked />
+      F</td>
+    </tr>
+    <tr>
+      <td>DOB
+      </td><td>
+        <input type="text" name="date" min="1990-01-01" max="2015-12-31" required />
+     </td>
+    </tr>
+    <tr>
+      <td>PLACE
+      </td><td>
+        <input type="text" name="textfield2" class="form-control" required pattern="[A-Z a-z .]{5,25}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>POST
+      </td><td>
+
+    <input type="text" name="textfield5" class="form-control" required pattern="[A-Z a-z .]{4,25}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>PIN
+      </td><td>
+        <input type="text" name="textfield6" class="form-control" required pattern="[0-9]{6}"/>
+    </td>
+    </tr>
+    <tr>
+      <td>PH NO
+      </td><td>
+        <input type="text" name="textfield7"  class="form-control" required pattern="[6789][0-9]{9}" />
+      </td>
+    </tr>
+    <tr>
+      <td>EMAIL
+      </td><td>
+        <input type="text" name="textfield8" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" />
+      </td>
+    </tr>
+    <tr>
+      <td>PHOTO
+      </td><td>
+        <input type="file" name="file"  class="form-control" required accept="image/*"/>
+    </td>
+      <tr>
+      <td>
+        USER NAME</td><td>
+      <input type="text" name="textfield9"  class="form-control" required />
+</td>
+    </tr>
+    <tr>
+      <td>PASSWORD
+      </td><td>
+        <input type="text" name="textfield10"  class="form-control"  required />
+      </td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="submit" name="Submit" value="SAVE" />
+      </label></td>
+    </tr>
+    <tr></tr>
+  </table>
+</form>
+</body>
+</html>

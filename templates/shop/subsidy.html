@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="search_subsidy">
+  <table width="279" border="1">
+    <tr>
+      <td colspan="4">Name
+        <label>
+        <input type="text" name="textfield" />
+        <input type="submit" name="Submit" value="search" />
+      </label></td>
+    </tr>
+    <tr>
+      <td width="46">Subsidy</td>
+      <td width="46">Amount</td>
+        <td width="31">Fertilizers</td>
+        <td width="128">&nbsp;</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{ i.name }}</td>
+      <td>{{ i.amount }}</td>
+      <td>&nbsp;{{ i.FERTILIZER.name }}</td>
+      <td><p><a href="edit_subsidy/{{ i.id }}">edit</a></p>
+      <p><a href="dlt_subsidy/{{ i.id }}">delete</a></p></td>
+    </tr>
+      {% endfor %}
+    <tr>
+      <td colspan="4"><div align="center"><a href="addsbsidy">Add</a></div></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+{% extends 'farmer/farmerindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1"  class="table table-striped table-dark">
+  <tr align="center"><td colspan="9"><h3 ALIGN="center"> <font color="white">ORDER HISTORY</font></h3></td></tr>
+    <tr>
+      <td>order id</td>
+      <td>Total</td>
+      <td>Date</td>
+      <td></td>
+        <td></td>
+
+    </tr>
+       {% for i in val %}
+    <tr>
+       <td>SBP{{ i.id }}</td>
+        <td>{{  i.price}}</td>
+        <td>{{ i.date }}</td>
+       <td><a href="/S_order_history/{{ i.id }}#main" class="btn btn-danger">view items</a></td>
+        <td></td>
+    </tr>
+       {% endfor %}
+      <tr>
+
+    </tr>
+  </table>
+</form>
+{% endblock %}
+
+
+
+
