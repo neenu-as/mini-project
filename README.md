@@ -29,8 +29,7 @@ to their health and farmers will get rightful amount of money from selling their
 This application shows what kind of products are available in krishi bhavan for the
 customers. These products are sold at krishi bhavan by the krishi bhavan officials.
 The products could be fertilzers,pesticides,different kind of seedlings etc.
-Famers can make  orders for subsidy products given by krishibavan. Once a farmer places an order, 
-it undergoes verification by the agricultural officer. Upon successful verification, the order is
+Famers can make  orders for subsidy products given by krishibavan. Once a farmer places an order, it undergoes verification by the agricultural officer. Upon successful verification, the order is
 confirmed. shows how many of them are left at krishibhavan. So the customers can check
 the availability of those products with the help of this application.
 A lot of schemes introduced by grama panchayath are carried out by krishi bhavan.So
