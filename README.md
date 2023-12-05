@@ -13,12 +13,12 @@ related problems. So there is no need to visit the krishi bhavan physically.
 Using this web application the farmers can send their doubts in the form of text to the
 agriculture officer. Krishi Bhavan officers can give updates regarding new plants,seeds,
 fertilizers subsidy products and schemes via this web application to the farmers.
-This web application allows the farmers to sell their agricultural products such as veg￾etables
+This web application allows the farmers to sell their agricultural products such as vegetables
 and fruits directly to the customers with the help of krishi bhavan. 
 They can post the details of the products which they are going to sell through our application.
 They can upload the pictures and give description of the products such as name,quantity,price. 
 These products will be handed over to the krishi bhavan officers and sold at krishi bhavan. 
-The application allows customers to view the available products for sale and place orders ac￾cordingly.
+The application allows customers to view the available products for sale and place orders accordingly.
 Once a customer places an order, it undergoes verification by the agricultural
 officer. Upon successful verification, the order is confirmed. Thus the customers can have
 vegetables and fruits which produced organically without using chemical fertilizers and
