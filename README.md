@@ -33,4 +33,4 @@ Famers can make  orders for subsidy products given by krishibavan. Once a farmer
 confirmed. shows how many of them are left at krishibhavan. So the customers can check
 the availability of those products with the help of this application.
 A lot of schemes introduced by grama panchayath are carried out by krishi bhavan.So
-this application provides the details of documents required for the submission.
+this application provides the details of documents required for the submission..
